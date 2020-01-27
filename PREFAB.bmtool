@@ -1,0 +1,13 @@
+{"cells": {
+  "Spikingcell": {
+    "vhseg": {
+	  "infvars": ["inf_kdrseg","minf_naseg"],
+	  "segvars": ["nvhalf_kdrseg", "nk_kdrseg", "nseg_kdrseg", "mvhalf_naseg", "mk_naseg", "mseg_naseg"],
+	  "eleak": "eleak",
+	  "gleak": "gbar_leak",
+	  "othersec": [],
+	  "clampsec": [],
+	  "synsec": []
+	}
+  }
+}
