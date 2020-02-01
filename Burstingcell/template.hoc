@@ -38,7 +38,7 @@ begintemplate Burstingcell
 			ek = -80
 			gbar_kdrseg = .1 // (.1~.5 siemens/cm2)
 			gbar_kaseg = .2 // (.1~.5 siemens/cm2)
-			gbar_kcaseg = .01 //// (.01~.05 siemens/cm2)
+			gbar_kca = .01 //// (.01~.05 siemens/cm2)
 			
 			insert naseg
 			ena = 50		// (mV)
