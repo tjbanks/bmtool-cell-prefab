@@ -1,0 +1,59 @@
+begintemplate Adaptationcell
+	public soma	// declares object soma is a public object that can be accessed by any procedures/functions
+	create soma	// declares soma as a membrane compartment object
+
+	proc init() {
+
+    		create soma	// create soma in the initialization
+
+		/////// geometrical properties //////
+		soma {
+			nseg=1	// create only one segment in the soma
+			// gives area of .628e-3 cm^2
+			L=1000		// (micrometer)
+			diam=9.99593	// (micrometer)
+	    	}
+		
+
+		/////// biophysical properties //////
+		soma {
+			cm = 1		// (microF/cm2)
+			// gives leak conductance of .03 mS/cm2
+			insert leak
+			eleak = -50 // (mV)
+			gbar_leak = .03e-3 // (siemens/cm2)
+			
+			/////////////////////////////////////////////////////////////////////////
+			// Use insert command to insert more channels here
+
+			///Spiking
+			insert naseg
+			ena = 50
+			gbar_naseg = .3 // (.1~.5 siemens/cm2)
+
+			insert kdrseg
+			ek = -80
+			gbar_kdrseg = .1 // (.1~.5 siemens/cm2)
+			
+			////Adaptation
+			
+			//Calcium pool
+			insert capool
+			cao = 3
+			cai = 50e-6
+			
+			insert casseg
+			gbar_casseg = .005 //(.001~.005 siemens/cm2)
+			
+			insert kaseg
+			gbar_kaseg = .15 // (.1~.5 siemens/cm2)
+			
+			insert kca
+			gbar_kca = .05 //// (.01~.05 siemens/cm2)
+			
+
+			/////////////////////////////////////////////////////////////////////////
+		}
+		
+	}
+endtemplate Adaptationcell
