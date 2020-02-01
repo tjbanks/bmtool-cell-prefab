@@ -1,5 +1,8 @@
 {"cells": {
   "Spikingcell": {
+	"mod_folder":"Spikingcell",
+	"hoc_folder":"Spikingcell",
+	"hoc_template_file":"template.hoc",
     "vhseg": {
 	  "infvars": ["inf_kdrseg","minf_naseg"],
 	  "segvars": ["nvhalf_kdrseg", "nk_kdrseg", "nseg_kdrseg", "mvhalf_naseg", "mk_naseg", "mseg_naseg"],
