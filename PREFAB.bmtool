@@ -20,6 +20,17 @@
 	  "eleak": "eleak",
 	  "gleak": "gbar_leak"
 	}
+  },
+    "Burstingcell": {
+	"mod_folder":"Burstingcell",
+	"hoc_folder":"Burstingcell",
+	"hoc_template_file":"template.hoc",
+    "vhseg": {
+	  "infvars": ["inf_kdrseg","minf_naseg","jainf_casseg","ainf_kaseg","uinf_catseg"],
+	  "segvars": ["nvhalf_kdrseg", "nk_kdrseg", "nseg_kdrseg", "mvhalf_naseg", "mk_naseg", "mseg_naseg","javhalf_casseg","jak_casseg","jaseg_casseg","avhalf_kaseg","ak_kaseg","aseg_kaseg","uvhalf_catseg","uk_catseg","useg_catseg"],
+	  "eleak": "eleak",
+	  "gleak": "gbar_leak"
+	}
   }
 }
 }

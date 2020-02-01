@@ -1,0 +1,50 @@
+begintemplate Burstingcell
+	public soma	// declares object soma is a public object that can be accessed by any procedures/functions
+	create soma	// declares soma as a membrane compartment object
+	
+
+	proc init() {
+
+    		create soma	// create soma in the initialization
+
+		/////// geometrical properties //////
+		soma {
+			nseg=1	// create only one segment in the soma
+			// gives area of .628e-3 cm^2
+			L=1000		// (micrometer)
+			diam=9.99593	// (micrometer)
+	    	}
+		
+		/////// biophysical properties //////
+		soma {
+			cm = 1	// (microF/cm2)
+			// gives leak conductance of .03 mS/cm2
+			insert leak
+			insert catseg
+			insert casseg
+			insert kdrseg
+			insert kaseg
+			insert kca
+			insert capool
+			
+			eleak = -50 // (mV)
+			gbar_leak = .03e-3 // (siemens/cm2)
+			
+			cao = 3
+			cai = 50e-6
+			gbar_catseg = .01 //(.005~.01 siemens/cm2)
+			gbar_casseg = .01 //(.001~.005 siemens/cm2)
+			
+			ek = -80
+			gbar_kdrseg = .1 // (.1~.5 siemens/cm2)
+			gbar_kaseg = .2 // (.1~.5 siemens/cm2)
+			gbar_kcaseg = .01 //// (.01~.05 siemens/cm2)
+			
+			insert naseg
+			ena = 50		// (mV)
+			gbar_naseg = 0.2	// (siemens/cm2)
+			
+		}
+
+	}
+endtemplate Burstingcell
